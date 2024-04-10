@@ -1,6 +1,6 @@
 # crystal-omp
 
-TODO: Write a description here
+OpenMP integration for Crystal.  Supported up to latest version.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      crystal-omp:
-       github: your-github-user/crystal-omp
+       github: Oblivious-Oblivious/crystal-omp
    ```
 
 2. Run `shards install`
@@ -24,11 +24,12 @@ TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
+1. Tests for binded functionality
+2. Wrapper objects for converting safe values to unsafe ones
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/crystal-omp/fork>)
+1. Fork it (<https://github.com/Oblivious-Oblivious/crystal-omp/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +37,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Oblivious](https://github.com/your-github-user) - creator and maintainer
+- [Oblivious](https://github.com/Oblivious-Oblivious) - creator and maintainer
