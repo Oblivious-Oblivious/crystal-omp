@@ -20,7 +20,33 @@ OpenMP integration for Crystal.  Supported up to latest version.
 require "crystal-omp"
 ```
 
-TODO: Write usage instructions here
+Try [examples](https://github.com/Oblivious-Oblivious/crystal-omp/tree/master/examples) for more.
+
+*`cat function.c`*
+```c
+int run_in_c(char *value) {
+  #pragma omp parallel
+  for(;;);
+  printf("%s\n", value);
+  return 42;
+}
+```
+
+*`cat test.cr`*
+```cr
+@[Link(ldflags: "#{__DIR__}/function.o")]
+lib LibTest
+  fun run_in_c(LibC::Char*) : LibC::Int;
+end
+
+res = LibTest.run_in_c "somestring";
+pp res;
+```
+
+```bash
+clang -fopenmp -o function.o function.c
+crystal test.cr
+```
 
 ## Development
 
